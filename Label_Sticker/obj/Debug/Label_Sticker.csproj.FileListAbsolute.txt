@@ -1,0 +1,16 @@
+C:\project\Label_Sticker\Label_Sticker\Label_Sticker\bin\Debug\Label_Sticker.exe.config
+C:\project\Label_Sticker\Label_Sticker\Label_Sticker\bin\Debug\Label_Sticker.exe
+C:\project\Label_Sticker\Label_Sticker\Label_Sticker\bin\Debug\Label_Sticker.pdb
+C:\project\Label_Sticker\Label_Sticker\Label_Sticker\obj\Debug\Label_Sticker.csproj.AssemblyReference.cache
+C:\project\Label_Sticker\Label_Sticker\Label_Sticker\obj\Debug\MainWindow.baml
+C:\project\Label_Sticker\Label_Sticker\Label_Sticker\obj\Debug\MainWindow.g.cs
+C:\project\Label_Sticker\Label_Sticker\Label_Sticker\obj\Debug\App.g.cs
+C:\project\Label_Sticker\Label_Sticker\Label_Sticker\obj\Debug\Label_Sticker_MarkupCompile.cache
+C:\project\Label_Sticker\Label_Sticker\Label_Sticker\obj\Debug\Label_Sticker.g.resources
+C:\project\Label_Sticker\Label_Sticker\Label_Sticker\obj\Debug\Label_Sticker.Properties.Resources.resources
+C:\project\Label_Sticker\Label_Sticker\Label_Sticker\obj\Debug\Label_Sticker.csproj.GenerateResource.cache
+C:\project\Label_Sticker\Label_Sticker\Label_Sticker\obj\Debug\Label_Sticker.csproj.CoreCompileInputs.cache
+C:\project\Label_Sticker\Label_Sticker\Label_Sticker\obj\Debug\Label_Sticker.exe
+C:\project\Label_Sticker\Label_Sticker\Label_Sticker\obj\Debug\Label_Sticker.pdb
+C:\project\Label_Sticker\Label_Sticker\Label_Sticker\obj\Debug\EditWindow.baml
+C:\project\Label_Sticker\Label_Sticker\Label_Sticker\obj\Debug\EditWindow.g.cs
