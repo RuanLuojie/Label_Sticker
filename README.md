@@ -16,8 +16,7 @@ Sticky Note 是一個簡單的 WPF 應用程式，用於顯示和編輯筆記。
 
 1. 將此儲存庫複製到你的本地機器：
 
-   ```bash
-   git clone https://github.com/yourusername/StickyNote.git```
+   git clone https://github.com/yourusername/StickyNote.git
 
 ```
 
