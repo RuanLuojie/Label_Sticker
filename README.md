@@ -1,6 +1,5 @@
 ### README.md
 
-```markdown
 # Sticky Note
 
 Sticky Note 是一個簡單的 WPF 應用程式，用於顯示和編輯筆記。它支援文本顯示、編輯功能，並提供一個簡單的自訂標題欄。
@@ -15,10 +14,11 @@ Sticky Note 是一個簡單的 WPF 應用程式，用於顯示和編輯筆記。
 ## 安裝
 
 1. 將此儲存庫複製到你的本地機器：
-
+  ```bash
    git clone https://github.com/yourusername/StickyNote.git
-
 ```
+
+
 
 2. 打開 Visual Studio 並載入解決方案文件 `Label_Sticker.sln`。
 
