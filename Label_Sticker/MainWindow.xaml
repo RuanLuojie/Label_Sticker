@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Sticky Note" Height="300" Width="400"
         Icon='C:\project\Label_Sticker\Label_Sticker\Label_Sticker\Resources\DAL.ico'
+        ResizeMode="CanResizeWithGrip"
         WindowStyle="None" AllowsTransparency="True" Background="Transparent" Topmost="True">
     <Window.Resources>
         <Style TargetType="{x:Type ScrollBar}">
@@ -29,11 +30,6 @@
     </Window.Resources>
 
     <Grid>
-        <!-- 用于拉伸窗口的透明边框 -->
-        <Border Background="Transparent" VerticalAlignment="Top" Height="5" MouseLeftButtonDown="ResizeWindow" Cursor="SizeNS" />
-        <Border Background="Transparent" VerticalAlignment="Bottom" Height="5" MouseLeftButtonDown="ResizeWindow" Cursor="SizeNS" />
-        <Border Background="Transparent" HorizontalAlignment="Left" Width="5" MouseLeftButtonDown="ResizeWindow" Cursor="SizeWE" />
-        <Border Background="Transparent" HorizontalAlignment="Right" Width="5" MouseLeftButtonDown="ResizeWindow" Cursor="SizeWE" />
 
         <!-- 自定义的标题栏 -->
         <Border Background="#3B3B3B" Height="30" VerticalAlignment="Top" CornerRadius="12,12,0,0"

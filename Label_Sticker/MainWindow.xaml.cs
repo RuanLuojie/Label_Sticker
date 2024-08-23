@@ -23,7 +23,6 @@ namespace Label_Sticker
 
         private void EnsureFileExists()
         {
-            // 检查文件是否存在，如果不存在则创建
             if (!File.Exists(filePath))
             {
                 using (StreamWriter sw = File.CreateText(filePath))
@@ -51,7 +50,7 @@ namespace Label_Sticker
                             FontFamily = new System.Windows.Media.FontFamily("Microsoft JhengHei"),
                             FontSize = 16,
                             Foreground = System.Windows.Media.Brushes.White,
-                            TextWrapping = TextWrapping.Wrap // 允许文本自动换行
+                            TextWrapping = TextWrapping.Wrap
                         };
                         ItemPanel.Children.Add(textBlock);
                     }
@@ -64,14 +63,13 @@ namespace Label_Sticker
                         FontFamily = new System.Windows.Media.FontFamily("Microsoft JhengHei"),
                         FontSize = 16,
                         Foreground = System.Windows.Media.Brushes.White,
-                        TextWrapping = TextWrapping.Wrap // 允许文本自动换行
+                        TextWrapping = TextWrapping.Wrap
                     };
                     ItemPanel.Children.Add(textBlock);
                 }
             }
             catch (IOException ex)
             {
-                // 处理文件正在被其他进程使用的情况
                 MessageBox.Show($"文件无法访问: {ex.Message}", "错误", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
@@ -94,7 +92,7 @@ namespace Label_Sticker
 
             debounceTimer = new DispatcherTimer
             {
-                Interval = TimeSpan.FromMilliseconds(500) // 延迟执行，防止多次触发
+                Interval = TimeSpan.FromMilliseconds(500)
             };
             debounceTimer.Tick += (s, e) =>
             {
@@ -105,7 +103,6 @@ namespace Label_Sticker
 
         private void OnChanged(object sender, FileSystemEventArgs e)
         {
-            // 触发延迟加载，避免重复触发导致的问题
             Dispatcher.Invoke(() =>
             {
                 if (!debounceTimer.IsEnabled)
@@ -119,47 +116,26 @@ namespace Label_Sticker
         {
             EditWindow editWindow = new EditWindow(filePath)
             {
-                Owner = this, // 设置主窗口为Owner
-                Left = this.Left, // 将EditWindow的左边位置对齐到MainWindow
-                Top = this.Top // 将EditWindow的顶部位置对齐到MainWindow
+                Owner = this,
+                Left = this.Left,
+                Top = this.Top
             };
             editWindow.ShowDialog();
-            LoadWorkItems(); // 重新加载内容以反映更改
+            LoadWorkItems();
         }
 
 
-        // 实现窗口拉伸功能
-        private void ResizeWindow(object sender, MouseButtonEventArgs e)
-        {
-            Border border = sender as Border;
 
-            if (border != null)
-            {
-                // 设置不同方向的光标和调整窗口大小的方向
-                if (border.Cursor == Cursors.SizeWE)
-                {
-                    this.Width = e.GetPosition(this).X;
-                }
-                else if (border.Cursor == Cursors.SizeNS)
-                {
-                    this.Height = e.GetPosition(this).Y;
-                }
-            }
-        }
-
-        // 关闭窗口按钮
         private void CloseButton_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
 
-        // 最小化窗口按钮
         private void MinimizeButton_Click(object sender, RoutedEventArgs e)
         {
             this.WindowState = WindowState.Minimized;
         }
 
-        // 最大化或恢复窗口按钮
         private void MaximizeButton_Click(object sender, RoutedEventArgs e)
         {
             if (this.WindowState == WindowState.Maximized)
@@ -172,7 +148,6 @@ namespace Label_Sticker
             }
         }
 
-        // 通过标题栏拖动窗口
         private void TitleBar_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             if (e.LeftButton == MouseButtonState.Pressed)
